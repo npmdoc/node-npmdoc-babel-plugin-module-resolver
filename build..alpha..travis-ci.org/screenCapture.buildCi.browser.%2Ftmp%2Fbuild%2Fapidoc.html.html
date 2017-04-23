@@ -1,0 +1,660 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/tleunen/babel-plugin-module-resolver#readme">babel-plugin-module-resolver (v2.7.0)</a>
+</h1>
+<h4>Module resolver plugin for Babel</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-module-resolver">module babel-plugin-module-resolver</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.default">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>default
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.manipulatePluginOptions">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>manipulatePluginOptions
+            <span class="apidocSignatureSpan">(pluginOpts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.mapModule">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>mapModule
+            <span class="apidocSignatureSpan">(sourcePath, currentFile, pluginOpts, cwd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>defaultExtensions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>getRealPath</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>import</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>jest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>mapToRelative</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>require</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>systemImport</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-module-resolver.getRealPath">module babel-plugin-module-resolver.getRealPath</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.getRealPath.default">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.getRealPath.</span>default
+            <span class="apidocSignatureSpan">(sourcePath, currentFile)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-module-resolver.import">module babel-plugin-module-resolver.import</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.import.default">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.import.</span>default
+            <span class="apidocSignatureSpan">(t, nodePath, mapper, state, cwd)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-module-resolver.jest">module babel-plugin-module-resolver.jest</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.jest.default">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.jest.</span>default
+            <span class="apidocSignatureSpan">(t, nodePath, mapper, state, cwd)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-module-resolver.mapToRelative">module babel-plugin-module-resolver.mapToRelative</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.mapToRelative.default">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.mapToRelative.</span>default
+            <span class="apidocSignatureSpan">(cwd, currentFile, module)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-module-resolver.require">module babel-plugin-module-resolver.require</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.require.default">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.require.</span>default
+            <span class="apidocSignatureSpan">(t, nodePath, mapper, state, cwd)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-module-resolver.systemImport">module babel-plugin-module-resolver.systemImport</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.systemImport.default">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.systemImport.</span>default
+            <span class="apidocSignatureSpan">(t, nodePath, mapper, state, cwd)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.babel-plugin-module-resolver.utils">module babel-plugin-module-resolver.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.utils.replaceExtension">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.utils.</span>replaceExtension
+            <span class="apidocSignatureSpan">(p, ext)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.utils.toLocalPath">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.utils.</span>toLocalPath
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.babel-plugin-module-resolver.utils.toPosixPath">
+            function <span class="apidocSignatureSpan">babel-plugin-module-resolver.utils.</span>toPosixPath
+            <span class="apidocSignatureSpan">(modulePath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-module-resolver" id="apidoc.module.babel-plugin-module-resolver">module babel-plugin-module-resolver</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.default" id="apidoc.element.babel-plugin-module-resolver.default">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>default
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (_ref) {
+  var t = _ref.types;
+  return {
+    manipulateOptions: function manipulateOptions(babelOptions) {
+      var _this = this;
+
+      var findPluginOptions = babelOptions.plugins.find(function (plugin) {
+        return plugin[0] === _this;
+      })[1];
+      findPluginOptions = manipulatePluginOptions(findPluginOptions);
+
+      this.customCWD = findPluginOptions.cwd;
+    },
+    pre: function pre(file) {
+      var customCWD = this.plugin.customCWD;
+
+      if (customCWD === 'babelrc') {
+        var startPath = file.opts.filename === 'unknown' ? './' : file.opts.filename;
+
+        var _findBabelConfig$sync = _findBabelConfig2.default.sync(startPath),
+            babelFile = _findBabelConfig$sync.file;
+
+        customCWD = babelFile ? _path2.default.dirname(babelFile) : null;
+      }
+
+      this.moduleResolverCWD = customCWD || process.cwd();
+    },
+
+
+    visitor: {
+      CallExpression: {
+        exit: function exit(nodePath, state) {
+          if (nodePath.node.seen) {
+            return;
+          }
+
+          (0, _require2.default)(t, nodePath, mapModule, state, this.moduleResolverCWD);
+          (0, _jest2.default)(t, nodePath, mapModule, state, this.moduleResolverCWD);
+          (0, _systemImport2.default)(t, nodePath, mapModule, state, this.moduleResolverCWD);
+
+          // eslint-disable-next-line no-param-reassign
+          nodePath.node.seen = true;
+        }
+      },
+      ImportDeclaration: {
+        exit: function exit(nodePath, state) {
+          (0, _import2.default)(t, nodePath, mapModule, state, this.moduleResolverCWD);
+        }
+      }
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.manipulatePluginOptions" id="apidoc.element.babel-plugin-module-resolver.manipulatePluginOptions">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>manipulatePluginOptions
+        <span class="apidocSignatureSpan">(pluginOpts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function manipulatePluginOptions(pluginOpts) {
+  if (pluginOpts.root) {
+    // eslint-disable-next-line no-param-reassign
+    pluginOpts.root = pluginOpts.root.reduce(function (resolvedDirs, dirPath) {
+      if (_glob2.default.hasMagic(dirPath)) {
+        return resolvedDirs.concat(_glob2.default.sync(dirPath).filter(function (p) {
+          return _fs2.default.lstatSync(p).isDirectory();
+        }));
+      }
+      return resolvedDirs.concat(dirPath);
+    }, []);
+  }
+
+  return pluginOpts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.mapModule" id="apidoc.element.babel-plugin-module-resolver.mapModule">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.</span>mapModule
+        <span class="apidocSignatureSpan">(sourcePath, currentFile, pluginOpts, cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mapModule(sourcePath, currentFile, pluginOpts, cwd) {
+  // Do not map source starting with a dot
+  if (sourcePath[0] === '.') {
+    return null;
+  }
+
+  return (0, _getRealPath2.default)(sourcePath, currentFile, {
+    cwd: cwd,
+    pluginOpts: pluginOpts,
+    extensions: pluginOpts.extensions || defaultExtensions
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-module-resolver.getRealPath" id="apidoc.module.babel-plugin-module-resolver.getRealPath">module babel-plugin-module-resolver.getRealPath</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.getRealPath.default" id="apidoc.element.babel-plugin-module-resolver.getRealPath.default">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.getRealPath.</span>default
+        <span class="apidocSignatureSpan">(sourcePath, currentFile)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getRealPath(sourcePath, currentFile) {
+  var opts = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+  if (sourcePath[0] === '.') {
+    return sourcePath;
+  }
+
+  // file param is a relative path from the environment current working directory
+  // (not from cwd param)
+  var absCurrentFile = _path2.default.resolve(currentFile);
+
+  var cwd = opts.cwd,
+      extensions = opts.extensions,
+      pluginOpts = opts.pluginOpts;
+
+  var rootDirs = pluginOpts.root || [];
+  var alias = pluginOpts.alias || {};
+
+  var sourceFileFromRoot = getRealPathFromRootConfig(sourcePath, absCurrentFile, rootDirs, cwd, extensions);
+  if (sourceFileFromRoot) {
+    return sourceFileFromRoot;
+  }
+
+  var sourceFileFromAlias = getRealPathFromAliasConfig(sourcePath, absCurrentFile, alias, cwd);
+  if (sourceFileFromAlias) {
+    return sourceFileFromAlias;
+  }
+
+  return sourcePath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-module-resolver.import" id="apidoc.module.babel-plugin-module-resolver.import">module babel-plugin-module-resolver.import</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.import.default" id="apidoc.element.babel-plugin-module-resolver.import.default">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.import.</span>default
+        <span class="apidocSignatureSpan">(t, nodePath, mapper, state, cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformImportCall(t, nodePath, mapper, state, cwd) {
+  var source = nodePath.get('source');
+  if (source.type === 'StringLiteral') {
+    var modulePath = mapper(source.node.value, state.file.opts.filename, state.opts, cwd);
+    if (modulePath) {
+      source.replaceWith(t.stringLiteral(modulePath));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-module-resolver.jest" id="apidoc.module.babel-plugin-module-resolver.jest">module babel-plugin-module-resolver.jest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.jest.default" id="apidoc.element.babel-plugin-module-resolver.jest.default">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.jest.</span>default
+        <span class="apidocSignatureSpan">(t, nodePath, mapper, state, cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformJestCalls(t, nodePath, mapper, state, cwd) {
+  var calleePath = nodePath.get('callee');
+
+  var jestMethods = ['genMockFromModule', 'mock', 'unmock', 'doMock', 'dontMock'];
+
+  if (!(t.isMemberExpression(calleePath.node) &amp;&amp; t.isIdentifier(calleePath.node.object, { name: 'jest' }) &amp;&amp; jestMethods.some(function
+ (methodName) {
+    return t.isIdentifier(calleePath.node.property, { name: methodName });
+  }))) {
+    return;
+  }
+
+  var args = nodePath.get('arguments');
+  if (!args.length) {
+    return;
+  }
+
+  var moduleArg = args[0];
+  if (moduleArg.node.type === 'StringLiteral') {
+    var modulePath = mapper(moduleArg.node.value, state.file.opts.filename, state.opts, cwd);
+    if (modulePath) {
+      var newArgs = [].concat(_toConsumableArray(args)).map(function (a) {
+        return a.node;
+      });
+      newArgs[0] = t.stringLiteral(modulePath);
+      nodePath.replaceWith(t.callExpression(calleePath.node, newArgs));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-module-resolver.mapToRelative" id="apidoc.module.babel-plugin-module-resolver.mapToRelative">module babel-plugin-module-resolver.mapToRelative</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.mapToRelative.default" id="apidoc.element.babel-plugin-module-resolver.mapToRelative.default">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.mapToRelative.</span>default
+        <span class="apidocSignatureSpan">(cwd, currentFile, module)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mapToRelative(cwd, currentFile, module) {
+  var from = _path2.default.dirname(currentFile);
+  var to = _path2.default.normalize(module);
+
+  from = resolve(cwd, from);
+  to = resolve(cwd, to);
+
+  var moduleMapped = _path2.default.relative(from, to);
+  return (0, _utils.toPosixPath)(moduleMapped);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-module-resolver.require" id="apidoc.module.babel-plugin-module-resolver.require">module babel-plugin-module-resolver.require</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.require.default" id="apidoc.element.babel-plugin-module-resolver.require.default">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.require.</span>default
+        <span class="apidocSignatureSpan">(t, nodePath, mapper, state, cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformRequireCall(t, nodePath, mapper, state, cwd) {
+  var calleePath = nodePath.get('callee');
+  if (!t.isIdentifier(calleePath.node, { name: 'require' }) &amp;&amp; !(t.isMemberExpression(calleePath.node) &amp;&amp; t.isIdentifier(calleePath
+.node.object, { name: 'require' }))) {
+    return;
+  }
+
+  var args = nodePath.get('arguments');
+  if (!args.length) {
+    return;
+  }
+
+  var moduleArg = args[0];
+  if (moduleArg.node.type === 'StringLiteral') {
+    var modulePath = mapper(moduleArg.node.value, state.file.opts.filename, state.opts, cwd);
+    if (modulePath) {
+      nodePath.replaceWith(t.callExpression(calleePath.node, [t.stringLiteral(modulePath)]));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-module-resolver.systemImport" id="apidoc.module.babel-plugin-module-resolver.systemImport">module babel-plugin-module-resolver.systemImport</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.systemImport.default" id="apidoc.element.babel-plugin-module-resolver.systemImport.default">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.systemImport.</span>default
+        <span class="apidocSignatureSpan">(t, nodePath, mapper, state, cwd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformSystemImportCall(t, nodePath, mapper, state, cwd) {
+  var calleePath = nodePath.get('callee');
+
+  if (!(t.isMemberExpression(calleePath.node) &amp;&amp; t.isIdentifier(calleePath.node.object, { name: 'System' }) &amp;&amp; t.isIdentifier(calleePath
+.node.property, { name: 'import' }))) {
+    return;
+  }
+
+  var args = nodePath.get('arguments');
+  if (!args.length) {
+    return;
+  }
+
+  var moduleArg = args[0];
+  if (moduleArg.node.type === 'StringLiteral') {
+    var modulePath = mapper(moduleArg.node.value, state.file.opts.filename, state.opts, cwd);
+    if (modulePath) {
+      nodePath.replaceWith(t.callExpression(calleePath.node, [t.stringLiteral(modulePath)]));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.babel-plugin-module-resolver.utils" id="apidoc.module.babel-plugin-module-resolver.utils">module babel-plugin-module-resolver.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.utils.replaceExtension" id="apidoc.element.babel-plugin-module-resolver.utils.replaceExtension">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.utils.</span>replaceExtension
+        <span class="apidocSignatureSpan">(p, ext)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replaceExtension(p, ext) {
+  var filename = _path2.default.basename(p, _path2.default.extname(p)) + ext;
+  return _path2.default.join(_path2.default.dirname(p), filename);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.utils.toLocalPath" id="apidoc.element.babel-plugin-module-resolver.utils.toLocalPath">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.utils.</span>toLocalPath
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toLocalPath(p) {
+  return p.replace(/\/index$/, '') // remove trailing /index
+  .replace(/^(?!\.)/, './'); // insert `./` to make it a local path
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.babel-plugin-module-resolver.utils.toPosixPath" id="apidoc.element.babel-plugin-module-resolver.utils.toPosixPath">
+        function <span class="apidocSignatureSpan">babel-plugin-module-resolver.utils.</span>toPosixPath
+        <span class="apidocSignatureSpan">(modulePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toPosixPath(modulePath) {
+  return modulePath.replace(/\\/g, '/');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
